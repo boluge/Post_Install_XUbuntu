@@ -9,19 +9,21 @@
 # ----------------------------------------------------------------------------------------
 compilateur="build-essential gcc"
 
-devtoolbox="git zsh htop nodejs"
+devtoolbox="git zsh htop nodejs" #composer, npm
 
 editeur="vim-gnome poedit"
 
-securite="gnupg "
+securite="gnupg " #Tor, Seahorse
 
-video="vlc mozilla-plugin-vlc libdvdread4 ubuntu-restricted-extras cheese"
+video="vlc mozilla-plugin-vlc cheese"
 
 graphisme="gimp inkscape"
 
-divers="filezilla caffeine redshift"
+divers="filezilla caffeine redshift" #ngrok, transfer.sh,
 
-style=""
+style="" #La Capitaine icons
+#https://github.com/LinxGem33/OSX-Arc-White/releases
+#https://github.com/keeferrourke/la-capitaine-icon-theme
 
 # paquets à installer
 paquets="$compilateur $devtoolbox $editeur $video $son $graphisme $divers $style"
@@ -44,7 +46,7 @@ then
 fi
 
 echo "Assurez-vous d'avoir lu et compris le script avant de l'exécuter."
-echo -n "Êtes-vous sûr de savoir ce que vous faites ? (o/n) "
+echo -n "Êtes-vous sûr de savoir ce que vous faites ? (y/n) "
 read rep
 if [ $rep != "o" ] && [ $rep != "oui" ] &&
    [ $rep != "y" ] && [ $rep != "yes" ]
@@ -69,7 +71,7 @@ echo "sed \"s/# deb http\:\/\/archive.canonical.com/deb http\:\/\/archive.canoni
 sed "s/# deb http\:\/\/archive.canonical.com/deb http\:\/\/archive.canonical.com/" /etc/apt/sources.list > sources.list.new
 cp -v sources.list.new /etc/apt/sources.list
 
-codecs="non-free-codecs libdvdcss2"
+codecs="non-free-codecs"
 
 # virtual box
 echo "deb http://download.virtualbox.org/virtualbox/debian $version contrib" | sudo tee -a /etc/apt/sources.list
@@ -78,7 +80,7 @@ virtualbox=" virtualbox"
 
 # wine
 sudo add-apt-repository ppa:samoilov-lex/aftl-stable
-mtp="  android-file-transfer"
+mtp=" android-file-transfer"
 
 # Java oracle
 add-apt-repositoryS ppa:webupd8team/java
