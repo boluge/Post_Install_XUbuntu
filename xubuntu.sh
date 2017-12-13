@@ -13,13 +13,13 @@ devtoolbox="git zsh htop nodejs" #composer, npm
 
 editeur="vim-gnome poedit"
 
-securite="gnupg " #Tor, Seahorse
+securite="gnupg tor deb.torproject.org-keyring" #Seahorse
 
 video="vlc mozilla-plugin-vlc cheese"
 
 graphisme="gimp inkscape"
 
-divers="filezilla caffeine redshift" #ngrok, transfer.sh,
+divers="filezilla caffeine redshift bleachbit" #ngrok, transfer.sh,
 
 style="" #La Capitaine icons
 #https://github.com/LinxGem33/OSX-Arc-White/releases
@@ -78,7 +78,7 @@ echo "deb http://download.virtualbox.org/virtualbox/debian $version contrib" | s
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 98AB5139
 virtualbox=" virtualbox"
 
-# wine
+# Androif file transfer
 sudo add-apt-repository ppa:samoilov-lex/aftl-stable
 mtp=" android-file-transfer"
 
