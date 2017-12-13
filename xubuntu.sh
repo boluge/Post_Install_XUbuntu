@@ -9,7 +9,7 @@
 # ----------------------------------------------------------------------------------------
 compilateur="build-essential gcc"
 
-devtoolbox="git zsh htop nodejs" #composer, npm
+devtoolbox="git zsh htop nodejs curl wget" #composer, npm
 
 editeur="vim-gnome poedit"
 
@@ -19,7 +19,7 @@ video="vlc mozilla-plugin-vlc cheese"
 
 graphisme="gimp inkscape"
 
-divers="filezilla caffeine redshift bleachbit" #ngrok, transfer.sh,
+divers="filezilla caffeine bleachbit" #ngrok, transfer.sh,
 
 style="" #La Capitaine icons
 #https://github.com/LinxGem33/OSX-Arc-White/releases
@@ -79,23 +79,26 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 98AB5139
 virtualbox=" virtualbox"
 
 # Androif file transfer
-sudo add-apt-repository ppa:samoilov-lex/aftl-stable
+add-apt-repository -y ppa:samoilov-lex/aftl-stable
 mtp=" android-file-transfer"
 
 # Java oracle
-add-apt-repositoryS ppa:webupd8team/java
+add-apt-repositoryS -y ppa:webupd8team/java
 java=" oracle-java8-installer"
 
 # RedShift
-add-apt-repository ppa:nathan-renniewaldock/flux
+add-apt-repository -y ppa:nathan-renniewaldock/flux
 redshift=" redshift"
+
+add-apt-repository -y ppa:upubuntu-com/xampp
+xampp=" xampp"
 
 #Spotify
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410
 spotify=" spotify-client"
 
-paquets="$codecs $paquets $virtualbox $java $spotify"
+paquets="$paquets $virtualbox $java $spotify $xampp $redshift"
 
 # ----------------------------------------------------------------------------------------
 # mise à jour des sources de logiciels
